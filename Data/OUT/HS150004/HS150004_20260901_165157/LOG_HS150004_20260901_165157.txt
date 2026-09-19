@@ -1,0 +1,67 @@
+TASK01: IMPORT TEST
+PASS: Import Data sheet succcessfully
+Data sheet has 220 row and 36 column
+Preview Data sheet
+   GioiTinh  DoTuoi  HocVan  BoPhan  ThamNien  ThuNhap  TN1  TN2  TN3  TN4  TN5  DT1  DT2  DT3  ...  DN3  DN4  CV1  CV2  CV3  CV4  CV5  DK1  DK2  DK3  DK4  HL1  HL2  HL3
+0         2       1       3       3         2        2    4    3    4    4    4    3    5    5  ...    3    3    4    5    3    3    4    3    4    5    3    3    3    3
+1         2       2       3       4         2        1    3    5    3    3    3    4    5    3  ...    5    4    5    3    4    3    4    3    3    5    4    4    3    3
+2         2       3       3       4         4        2    3    4    5    5    5    3    5    4  ...    4    3    4    4    3    4    3    4    5    5    5    4    4    4
+
+[3 rows x 36 columns]
+PASS: Import Metadata sheet succcessfully
+Metadata sheet has 220 row and 36 column
+Preview Metadata sheet
+       Name     Group Is_Include Is_Depentdent Accepted_Value
+0  GioiTinh  Category        Yes            No            NaN
+1    DoTuoi  Category        Yes            No            NaN
+2    HocVan  Category        Yes            No            NaN
+
+TASK02: DATA TEST
+PASS: No null and outlier value
+
+TASK03: Descriptive Test
+PASS: Column TN1 has mean = 3.686 >= 3 and std = 1.058 <= 2
+PASS: Column TN2 has mean = 3.745 >= 3 and std = 1.029 <= 2
+PASS: Column TN3 has mean = 3.736 >= 3 and std = 0.981 <= 2
+PASS: Column TN4 has mean = 3.736 >= 3 and std = 1.026 <= 2
+PASS: Column TN5 has mean = 3.809 >= 3 and std = 0.946 <= 2
+PASS: Column DT1 has mean = 3.805 >= 3 and std = 0.971 <= 2
+PASS: Column DT2 has mean = 3.836 >= 3 and std = 0.951 <= 2
+PASS: Column DT3 has mean = 3.755 >= 3 and std = 1.009 <= 2
+PASS: Column DT4 has mean = 3.832 >= 3 and std = 0.953 <= 2
+PASS: Column LD1 has mean = 3.791 >= 3 and std = 1.061 <= 2
+PASS: Column LD2 has mean = 3.777 >= 3 and std = 0.993 <= 2
+PASS: Column LD3 has mean = 3.827 >= 3 and std = 1.006 <= 2
+PASS: Column LD4 has mean = 3.832 >= 3 and std = 0.99 <= 2
+PASS: Column LD5 has mean = 3.968 >= 3 and std = 0.749 <= 2
+PASS: Column DN1 has mean = 3.464 >= 3 and std = 0.948 <= 2
+PASS: Column DN2 has mean = 3.305 >= 3 and std = 1.008 <= 2
+PASS: Column DN3 has mean = 3.432 >= 3 and std = 0.965 <= 2
+PASS: Column DN4 has mean = 3.777 >= 3 and std = 0.765 <= 2
+PASS: Column CV1 has mean = 3.455 >= 3 and std = 1.004 <= 2
+PASS: Column CV2 has mean = 3.432 >= 3 and std = 1.064 <= 2
+PASS: Column CV3 has mean = 3.477 >= 3 and std = 0.986 <= 2
+PASS: Column CV4 has mean = 3.486 >= 3 and std = 0.953 <= 2
+PASS: Column CV5 has mean = 3.423 >= 3 and std = 0.997 <= 2
+PASS: Column DK1 has mean = 3.736 >= 3 and std = 0.898 <= 2
+PASS: Column DK2 has mean = 3.868 >= 3 and std = 0.954 <= 2
+PASS: Column DK3 has mean = 3.718 >= 3 and std = 0.952 <= 2
+PASS: Column DK4 has mean = 3.559 >= 3 and std = 0.994 <= 2
+PASS: Column HL1 has mean = 3.636 >= 3 and std = 0.699 <= 2
+PASS: Column HL2 has mean = 3.664 >= 3 and std = 0.659 <= 2
+PASS: Column HL3 has mean = 3.705 >= 3 and std = 0.64 <= 2
+PASS: All column pass descriptive
+
+TEST04: Cronbach Test
+PASS GOOD: Cronbach Alpha of DK is 0.726 in range 0.7 -> 0.8
+ERROR: Cronbach Alpha of DN is 0.57 < 0.6
+ADVISE: Cronbach Alpha of DN if remove DN1 is 0.515 which stll < 0.6
+ADVISE: Cronbach Alpha of DN if remove DN2 is 0.46 which stll < 0.6
+ADVISE: Cronbach Alpha of DN if remove DN3 is 0.418 which stll < 0.6
+ADVISE: Cronbach Alpha of DN if remove DN4 is 0.575 which stll < 0.6
+PASS VERY GOOD: Cronbach Alpha of CV is 0.804 in range 0.8 -> 1
+PASS GOOD: Cronbach Alpha of HL is 0.764 in range 0.7 -> 0.8
+PASS GOOD: Cronbach Alpha of DT is 0.782 in range 0.7 -> 0.8
+PASS GOOD: Cronbach Alpha of LD is 0.782 in range 0.7 -> 0.8
+PASS GOOD: Cronbach Alpha of TN is 0.76 in range 0.7 -> 0.8
+

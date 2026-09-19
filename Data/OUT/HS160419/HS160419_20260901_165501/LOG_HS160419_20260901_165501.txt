@@ -1,0 +1,190 @@
+TASK01: IMPORT TEST
+PASS: Import Data sheet succcessfully
+Data sheet has 220 row and 36 column
+Preview Data sheet
+   GioiTinh  DoTuoi  HocVan  BoPhan  ThamNien  ThuNhap  TN1  TN2  TN3  TN4  TN5  DT1  DT2  DT3  ...  DN3  DN4  CV1  CV2  CV3  CV4  CV5  DK1  DK2  DK3  DK4  HL1  HL2  HL3
+0         2       1       3       3         2        2    4    3    5    3    5    4    2    4  ...    5    3    4    2    2    2    3    3    4    3    3    3    3    3
+1         2       2       3       4         2        1    5    5    4    4    5    4    4    2  ...    4    4    3    2    3    3    4    4    3    3    4    4    3    3
+2         2       3       3       4         4        2    2    4    4    4    3    5    3    4  ...    2    4    4    3    2    4    3    5    4    3    5    4    4    4
+
+[3 rows x 36 columns]
+PASS: Import Metadata sheet succcessfully
+Metadata sheet has 220 row and 36 column
+Preview Metadata sheet
+       Name     Group Is_Include Is_Depentdent Accepted_Value
+0  GioiTinh  Category        Yes            No            NaN
+1    DoTuoi  Category        Yes            No            NaN
+2    HocVan  Category        Yes            No            NaN
+
+TASK02: DATA TEST
+PASS: No null and outlier value
+
+TASK03: Descriptive Test
+PASS: Column LD1 has mean = 3.691 >= 3 and std = 1.092 <= 2
+PASS: Column LD2 has mean = 3.705 >= 3 and std = 1.011 <= 2
+PASS: Column LD3 has mean = 3.782 >= 3 and std = 1.037 <= 2
+PASS: Column LD4 has mean = 3.786 >= 3 and std = 1.014 <= 2
+PASS: Column LD5 has mean = 3.882 >= 3 and std = 0.724 <= 2
+PASS: Column DN1 has mean = 3.427 >= 3 and std = 0.946 <= 2
+PASS: Column DN2 has mean = 3.277 >= 3 and std = 1.016 <= 2
+PASS: Column DN3 has mean = 3.405 >= 3 and std = 0.977 <= 2
+PASS: Column DN4 has mean = 3.805 >= 3 and std = 0.736 <= 2
+PASS: Column CV1 has mean = 3.327 >= 3 and std = 0.999 <= 2
+PASS: Column CV2 has mean = 3.341 >= 3 and std = 1.084 <= 2
+PASS: Column CV3 has mean = 3.4 >= 3 and std = 1.004 <= 2
+PASS: Column CV4 has mean = 3.418 >= 3 and std = 0.969 <= 2
+PASS: Column CV5 has mean = 3.391 >= 3 and std = 0.999 <= 2
+PASS: Column DK1 has mean = 3.682 >= 3 and std = 0.979 <= 2
+PASS: Column DK2 has mean = 3.809 >= 3 and std = 0.941 <= 2
+PASS: Column DK3 has mean = 3.668 >= 3 and std = 0.967 <= 2
+PASS: Column DK4 has mean = 3.559 >= 3 and std = 0.994 <= 2
+PASS: Column HL1 has mean = 3.636 >= 3 and std = 0.699 <= 2
+PASS: Column HL2 has mean = 3.664 >= 3 and std = 0.659 <= 2
+PASS: Column HL3 has mean = 3.705 >= 3 and std = 0.64 <= 2
+PASS: All column pass descriptive
+
+TEST04: Cronbach Test
+PASS VERY GOOD: Cronbach Alpha of CV is 0.824 in range 0.8 -> 1
+PASS: Cronbach Alpha of DN is 0.623 in range 0.6 -> 0.7
+PASS GOOD: Cronbach Alpha of DK is 0.711 in range 0.7 -> 0.8
+PASS VERY GOOD: Cronbach Alpha of LD is 0.818 in range 0.8 -> 1
+PASS GOOD: Cronbach Alpha of HL is 0.764 in range 0.7 -> 0.8
+PASS: All group pass cronbach
+
+TASK05: EFA Test
+PASS: KMO all variable = 0.768 which > 0.5
+PASS: KMO of LD1 = 0.844 that >= 0.5
+PASS: KMO of LD2 = 0.83 that >= 0.5
+PASS: KMO of LD3 = 0.815 that >= 0.5
+PASS: KMO of LD4 = 0.824 that >= 0.5
+PASS: KMO of LD5 = 0.754 that >= 0.5
+PASS: KMO of DN1 = 0.546 that >= 0.5
+PASS: KMO of DN2 = 0.55 that >= 0.5
+PASS: KMO of DN3 = 0.524 that >= 0.5
+PASS: KMO of DN4 = 0.649 that >= 0.5
+PASS: KMO of CV1 = 0.825 that >= 0.5
+PASS: KMO of CV2 = 0.798 that >= 0.5
+PASS: KMO of CV3 = 0.84 that >= 0.5
+PASS: KMO of CV4 = 0.856 that >= 0.5
+PASS: KMO of CV5 = 0.825 that >= 0.5
+PASS: KMO of DK1 = 0.6 that >= 0.5
+PASS: KMO of DK2 = 0.714 that >= 0.5
+PASS: KMO of DK3 = 0.696 that >= 0.5
+PASS: KMO of DK4 = 0.662 that >= 0.5
+PASS: KMO of HL1 = 0.812 that >= 0.5
+PASS: KMO of HL2 = 0.801 that >= 0.5
+PASS: KMO of HL3 = 0.787 that >= 0.5
+PASS: chi_square = 1721.647 and p_value = 0.0 that < 0.5
+ADVISE: Eigenvalues show that should have 6 factor
+EFA Rotated Component Matrix
+            1         2         3         4         5         6
+LD1  0.679789                                                  
+LD2   0.69178                                                  
+LD3  0.775024                                                  
+LD4  0.677163                                                  
+LD5  0.565006                      0.550181                    
+DN1                                           0.53078          
+DN2                                          0.564305          
+DN3                                          0.651014          
+DN4                      0.401214            0.431835          
+CV1            0.710324                                        
+CV2            0.730801                                        
+CV3            0.673404                                        
+CV4            0.599412                                        
+CV5            0.730402                                        
+DK1                                                            
+DK2                      0.666894                              
+DK3                      0.827764                              
+DK4                      0.836066                              
+HL1  0.529234                                          0.598913
+HL2  0.419237                      0.459837                    
+HL3                                0.782161                    
+
+Task06: Peason Test
+PASS: Peason Correlation maxtrix compute successfully with peason, p_value
+                CV              DN               DK               LD              HL
+CV      (1.0, 0.0)  (-0.04, 0.558)   (0.228, 0.001)   (0.013, 0.853)    (0.334, 0.0)
+DN  (-0.04, 0.558)      (1.0, 0.0)   (0.063, 0.351)   (0.024, 0.728)  (0.058, 0.392)
+DK  (0.228, 0.001)  (0.063, 0.351)       (1.0, 0.0)  (-0.005, 0.942)  (0.218, 0.001)
+LD  (0.013, 0.853)  (0.024, 0.728)  (-0.005, 0.942)       (1.0, 0.0)    (0.584, 0.0)
+HL    (0.334, 0.0)  (0.058, 0.392)   (0.218, 0.001)     (0.584, 0.0)      (1.0, 0.0)
+
+TASK07 Regression Test
+PASS: Complete calculate Unstandardized Regression
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                     HL   R-squared:                       0.472
+Model:                            OLS   Adj. R-squared:                  0.462
+Method:                 Least Squares   F-statistic:                     48.11
+Date:                Tue, 01 Sep 2026   Prob (F-statistic):           7.41e-29
+Time:                        16:55:02   Log-Likelihood:                -109.60
+No. Observations:                 220   AIC:                             229.2
+Df Residuals:                     215   BIC:                             246.2
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          0.7914      0.260      3.047      0.003       0.279       1.303
+DN             0.0403      0.043      0.935      0.351      -0.045       0.125
+CV             0.2087      0.036      5.775      0.000       0.137       0.280
+DK             0.1165      0.039      2.951      0.004       0.039       0.194
+LD             0.4253      0.036     11.698      0.000       0.354       0.497
+==============================================================================
+Omnibus:                       16.655   Durbin-Watson:                   2.032
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               24.310
+Skew:                          -0.483   Prob(JB):                     5.26e-06
+Kurtosis:                       4.311   Cond. No.                         70.2
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+ERROR: Unstandardized model both R-squared and Adj. R-squared less than 0.5
+PASS: Unstandardized model sig of f_value = 0.0 that less than 0.05
+PASS: Durbin_Watson index = 2.032 in range 1 -> 3
+PASS: Complete calculate Standardized Regression
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                     HL   R-squared:                       0.472
+Model:                            OLS   Adj. R-squared:                  0.462
+Method:                 Least Squares   F-statistic:                     48.11
+Date:                Tue, 01 Sep 2026   Prob (F-statistic):           7.41e-29
+Time:                        16:55:02   Log-Likelihood:                -109.60
+No. Observations:                 220   AIC:                             229.2
+Df Residuals:                     215   BIC:                             246.2
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          0.7914      0.260      3.047      0.003       0.279       1.303
+DN             0.0403      0.043      0.935      0.351      -0.045       0.125
+CV             0.2087      0.036      5.775      0.000       0.137       0.280
+DK             0.1165      0.039      2.951      0.004       0.039       0.194
+LD             0.4253      0.036     11.698      0.000       0.354       0.497
+==============================================================================
+Omnibus:                       16.655   Durbin-Watson:                   2.032
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               24.310
+Skew:                          -0.483   Prob(JB):                     5.26e-06
+Kurtosis:                       4.311   Cond. No.                         70.2
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+ERROR: Standardized model both R-squared and Adj. R-squared less than 0.5
+PASS: Standardized model sig of f_value = 0.0 that less than 0.05
+PASS: Durbin_Watson index = 2.032 in range 1 -> 3
+Summary Beta, corr and sig value of both Unstandardized and Standardized
+       B_Unstandardized  t_Unstandardized  Sig._Unstandardized  B_Standardized  t_Standardized  Sig._Standardized
+const             0.791             3.047                0.003          -0.000          -0.000              1.000
+DN                0.040             0.935                0.351           0.046           0.935              0.351
+CV                0.209             5.775                0.000           0.294           5.775              0.000
+DK                0.117             2.951                0.004           0.151           2.951              0.004
+LD                0.425            11.698                0.000           0.580          11.698              0.000
+VIF check
+PASS: VIF of const = 1.0 that < 2
+PASS: VIF of DN = 1.008 that < 2
+PASS: VIF of CV = 1.058 that < 2
+PASS: VIF of DK = 1.061 that < 2
+PASS: VIF of LD = 1.001 that < 2
+

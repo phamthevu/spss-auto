@@ -1,0 +1,229 @@
+TASK01: IMPORT TEST
+PASS: Import Data sheet succcessfully
+Data sheet has 220 row and 36 column
+Preview Data sheet
+   GioiTinh  DoTuoi  HocVan  BoPhan  ThamNien  ThuNhap  TN1  TN2  TN3  TN4  TN5  DT1  DT2  DT3  ...  DN3  DN4  CV1  CV2  CV3  CV4  CV5  DK1  DK2  DK3  DK4  HL1  HL2  HL3
+0         2       1       3       3         2        2    4    3    5    3    5    4    2    4  ...    5    3    4    2    2    2    3    3    4    3    3    3    3    3
+1         2       2       3       4         2        1    5    5    4    4    5    4    4    2  ...    4    4    3    2    3    3    4    4    3    3    4    4    3    3
+2         2       3       3       4         4        2    2    4    4    4    3    5    3    4  ...    2    4    4    3    2    4    3    5    4    3    5    4    4    4
+
+[3 rows x 36 columns]
+PASS: Import Metadata sheet succcessfully
+Metadata sheet has 220 row and 36 column
+Preview Metadata sheet
+       Name     Group Is_Include Is_Depentdent Accepted_Value
+0  GioiTinh  Category        Yes            No            NaN
+1    DoTuoi  Category        Yes            No            NaN
+2    HocVan  Category        Yes            No            NaN
+
+TASK02: DATA TEST
+PASS: No null and outlier value
+
+TASK03: Descriptive Test
+PASS: Column TN1 has mean = 3.623 >= 3 and std = 1.097 <= 2
+PASS: Column TN2 has mean = 3.645 >= 3 and std = 1.017 <= 2
+PASS: Column TN3 has mean = 3.673 >= 3 and std = 0.976 <= 2
+PASS: Column TN4 has mean = 3.655 >= 3 and std = 1.046 <= 2
+PASS: Column TN5 has mean = 3.636 >= 3 and std = 0.986 <= 2
+PASS: Column DT1 has mean = 3.75 >= 3 and std = 0.991 <= 2
+PASS: Column DT2 has mean = 3.727 >= 3 and std = 0.964 <= 2
+PASS: Column DT3 has mean = 3.645 >= 3 and std = 1.048 <= 2
+PASS: Column DT4 has mean = 3.791 >= 3 and std = 0.994 <= 2
+PASS: Column LD1 has mean = 3.691 >= 3 and std = 1.092 <= 2
+PASS: Column LD2 has mean = 3.705 >= 3 and std = 1.011 <= 2
+PASS: Column LD3 has mean = 3.782 >= 3 and std = 1.037 <= 2
+PASS: Column LD4 has mean = 3.786 >= 3 and std = 1.014 <= 2
+PASS: Column LD5 has mean = 3.882 >= 3 and std = 0.724 <= 2
+PASS: Column DN1 has mean = 3.427 >= 3 and std = 0.946 <= 2
+PASS: Column DN2 has mean = 3.277 >= 3 and std = 1.016 <= 2
+PASS: Column DN3 has mean = 3.405 >= 3 and std = 0.977 <= 2
+PASS: Column DN4 has mean = 3.805 >= 3 and std = 0.736 <= 2
+PASS: Column CV1 has mean = 3.327 >= 3 and std = 0.999 <= 2
+PASS: Column CV2 has mean = 3.341 >= 3 and std = 1.084 <= 2
+PASS: Column CV3 has mean = 3.4 >= 3 and std = 1.004 <= 2
+PASS: Column CV4 has mean = 3.418 >= 3 and std = 0.969 <= 2
+PASS: Column CV5 has mean = 3.391 >= 3 and std = 0.999 <= 2
+PASS: Column DK1 has mean = 3.682 >= 3 and std = 0.979 <= 2
+PASS: Column DK2 has mean = 3.809 >= 3 and std = 0.941 <= 2
+PASS: Column DK3 has mean = 3.668 >= 3 and std = 0.967 <= 2
+PASS: Column DK4 has mean = 3.559 >= 3 and std = 0.994 <= 2
+PASS: Column HL1 has mean = 3.636 >= 3 and std = 0.699 <= 2
+PASS: Column HL2 has mean = 3.664 >= 3 and std = 0.659 <= 2
+PASS: Column HL3 has mean = 3.705 >= 3 and std = 0.64 <= 2
+PASS: All column pass descriptive
+
+TEST04: Cronbach Test
+PASS GOOD: Cronbach Alpha of DK is 0.711 in range 0.7 -> 0.8
+PASS: Cronbach Alpha of DN is 0.623 in range 0.6 -> 0.7
+PASS VERY GOOD: Cronbach Alpha of CV is 0.824 in range 0.8 -> 1
+PASS GOOD: Cronbach Alpha of HL is 0.764 in range 0.7 -> 0.8
+PASS VERY GOOD: Cronbach Alpha of DT is 0.82 in range 0.8 -> 1
+PASS VERY GOOD: Cronbach Alpha of LD is 0.818 in range 0.8 -> 1
+PASS GOOD: Cronbach Alpha of TN is 0.79 in range 0.7 -> 0.8
+PASS: All group pass cronbach
+
+TASK05: EFA Test
+PASS: KMO all variable = 0.745 which > 0.5
+PASS: KMO of TN1 = 0.686 that >= 0.5
+PASS: KMO of TN2 = 0.765 that >= 0.5
+PASS: KMO of TN3 = 0.65 that >= 0.5
+PASS: KMO of TN4 = 0.684 that >= 0.5
+PASS: KMO of TN5 = 0.812 that >= 0.5
+PASS: KMO of DT1 = 0.828 that >= 0.5
+PASS: KMO of DT2 = 0.762 that >= 0.5
+PASS: KMO of DT3 = 0.79 that >= 0.5
+PASS: KMO of DT4 = 0.771 that >= 0.5
+PASS: KMO of LD1 = 0.753 that >= 0.5
+PASS: KMO of LD2 = 0.817 that >= 0.5
+PASS: KMO of LD3 = 0.77 that >= 0.5
+PASS: KMO of LD4 = 0.728 that >= 0.5
+PASS: KMO of LD5 = 0.698 that >= 0.5
+ERROR: KMO of DN1 = 0.49 that < 0.5
+PASS: KMO of DN2 = 0.503 that >= 0.5
+ERROR: KMO of DN3 = 0.497 that < 0.5
+PASS: KMO of DN4 = 0.671 that >= 0.5
+PASS: KMO of CV1 = 0.737 that >= 0.5
+PASS: KMO of CV2 = 0.754 that >= 0.5
+PASS: KMO of CV3 = 0.81 that >= 0.5
+PASS: KMO of CV4 = 0.802 that >= 0.5
+PASS: KMO of CV5 = 0.745 that >= 0.5
+PASS: KMO of DK1 = 0.589 that >= 0.5
+PASS: KMO of DK2 = 0.681 that >= 0.5
+PASS: KMO of DK3 = 0.66 that >= 0.5
+PASS: KMO of DK4 = 0.666 that >= 0.5
+PASS: KMO of HL1 = 0.758 that >= 0.5
+PASS: KMO of HL2 = 0.825 that >= 0.5
+PASS: KMO of HL3 = 0.873 that >= 0.5
+PASS: chi_square = 2994.602 and p_value = 0.0 that < 0.5
+ADVISE: Eigenvalues show that should have 7 factor
+EFA Rotated Component Matrix
+            1         2         3         4         5         6         7
+TN1                      0.616093                                0.404192
+TN2                      0.657145                                        
+TN3                      0.619413                                        
+TN4                      0.689711                                        
+TN5                      0.654227                                        
+DT1            0.703094                                                  
+DT2            0.637268                                                  
+DT3            0.715266                                                  
+DT4            0.765525                                                  
+LD1  0.669385                                                            
+LD2  0.645923                                                            
+LD3  0.718955                                                            
+LD4  0.683807                                                            
+LD5    0.6985            0.586633                                        
+DN1                                                     0.53065          
+DN2                                                     0.53618          
+DN3                                                    0.655744          
+DN4                                          0.401275  0.460785          
+CV1                                0.691306                              
+CV2                                0.755557                              
+CV3                                 0.71809                              
+CV4                                0.612466                              
+CV5                                0.674058                              
+DK1                                                                      
+DK2                                          0.668178                    
+DK3                                          0.843526                    
+DK4                                          0.820927                    
+HL1   0.46222                                                    0.626399
+HL2            0.406878                                                  
+HL3            0.478926  0.479046                                        
+
+Task06: Peason Test
+PASS: Peason Correlation maxtrix compute successfully with peason, p_value
+                 DK              DN               CV              HL               DT               LD               TN
+DK       (1.0, 0.0)  (0.063, 0.351)   (0.228, 0.001)  (0.218, 0.001)  (-0.032, 0.636)  (-0.005, 0.942)   (0.105, 0.121)
+DN   (0.063, 0.351)      (1.0, 0.0)   (-0.04, 0.558)  (0.058, 0.392)   (0.093, 0.169)   (0.024, 0.728)    (0.051, 0.45)
+CV   (0.228, 0.001)  (-0.04, 0.558)       (1.0, 0.0)    (0.334, 0.0)   (0.022, 0.743)   (0.013, 0.853)  (-0.025, 0.717)
+HL   (0.218, 0.001)  (0.058, 0.392)     (0.334, 0.0)      (1.0, 0.0)     (0.611, 0.0)     (0.584, 0.0)     (0.439, 0.0)
+DT  (-0.032, 0.636)  (0.093, 0.169)   (0.022, 0.743)    (0.611, 0.0)       (1.0, 0.0)     (0.438, 0.0)    (0.18, 0.007)
+LD  (-0.005, 0.942)  (0.024, 0.728)   (0.013, 0.853)    (0.584, 0.0)     (0.438, 0.0)       (1.0, 0.0)   (0.083, 0.217)
+TN   (0.105, 0.121)   (0.051, 0.45)  (-0.025, 0.717)    (0.439, 0.0)    (0.18, 0.007)   (0.083, 0.217)       (1.0, 0.0)
+
+TASK07 Regression Test
+PASS: Complete calculate Unstandardized Regression
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                     HL   R-squared:                       0.731
+Model:                            OLS   Adj. R-squared:                  0.724
+Method:                 Least Squares   F-statistic:                     96.65
+Date:                Tue, 01 Sep 2026   Prob (F-statistic):           5.05e-58
+Time:                        16:52:00   Log-Likelihood:                -35.329
+No. Observations:                 220   AIC:                             84.66
+Df Residuals:                     213   BIC:                             108.4
+Df Model:                           6                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -0.3298      0.203     -1.621      0.107      -0.731       0.071
+DK             0.0996      0.029      3.491      0.001       0.043       0.156
+DN             0.0003      0.031      0.011      0.991      -0.061       0.062
+CV             0.2125      0.026      8.184      0.000       0.161       0.264
+DT             0.2586      0.027      9.417      0.000       0.204       0.313
+LD             0.2838      0.029      9.789      0.000       0.227       0.341
+TN             0.2411      0.026      9.116      0.000       0.189       0.293
+==============================================================================
+Omnibus:                       16.139   Durbin-Watson:                   1.969
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               26.175
+Skew:                          -0.428   Prob(JB):                     2.07e-06
+Kurtosis:                       4.457   Cond. No.                         94.2
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+PASS: Unstandardized model both R-squared and Adj. R-squared more than 0.5
+PASS: Unstandardized model sig of f_value = 0.0 that less than 0.05
+PASS: Durbin_Watson index = 1.969 in range 1 -> 3
+PASS: Complete calculate Standardized Regression
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                     HL   R-squared:                       0.731
+Model:                            OLS   Adj. R-squared:                  0.724
+Method:                 Least Squares   F-statistic:                     96.65
+Date:                Tue, 01 Sep 2026   Prob (F-statistic):           5.05e-58
+Time:                        16:52:00   Log-Likelihood:                -35.329
+No. Observations:                 220   AIC:                             84.66
+Df Residuals:                     213   BIC:                             108.4
+Df Model:                           6                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -0.3298      0.203     -1.621      0.107      -0.731       0.071
+DK             0.0996      0.029      3.491      0.001       0.043       0.156
+DN             0.0003      0.031      0.011      0.991      -0.061       0.062
+CV             0.2125      0.026      8.184      0.000       0.161       0.264
+DT             0.2586      0.027      9.417      0.000       0.204       0.313
+LD             0.2838      0.029      9.789      0.000       0.227       0.341
+TN             0.2411      0.026      9.116      0.000       0.189       0.293
+==============================================================================
+Omnibus:                       16.139   Durbin-Watson:                   1.969
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               26.175
+Skew:                          -0.428   Prob(JB):                     2.07e-06
+Kurtosis:                       4.457   Cond. No.                         94.2
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+PASS: Standardized model both R-squared and Adj. R-squared more than 0.5
+PASS: Standardized model sig of f_value = 0.0 that less than 0.05
+PASS: Durbin_Watson index = 1.969 in range 1 -> 3
+Summary Beta, corr and sig value of both Unstandardized and Standardized
+       B_Unstandardized  t_Unstandardized  Sig._Unstandardized  B_Standardized  t_Standardized  Sig._Standardized
+const            -0.330            -1.621                0.107          -0.000          -0.000              1.000
+DK                0.100             3.491                0.001           0.129           3.491              0.001
+DN                0.000             0.011                0.991           0.000           0.011              0.991
+CV                0.213             8.184                0.000           0.300           8.184              0.000
+DT                0.259             9.417                0.000           0.379           9.417              0.000
+LD                0.284             9.789                0.000           0.387           9.789              0.000
+TN                0.241             9.116                0.000           0.332           9.116              0.000
+VIF check
+PASS: VIF of const = 1.0 that < 2
+PASS: VIF of DK = 1.079 that < 2
+PASS: VIF of DN = 1.018 that < 2
+PASS: VIF of CV = 1.063 that < 2
+PASS: VIF of DT = 1.286 that < 2
+PASS: VIF of LD = 1.238 that < 2
+PASS: VIF of TN = 1.051 that < 2
+

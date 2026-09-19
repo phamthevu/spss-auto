@@ -1,0 +1,26 @@
+TASK01: IMPORT TEST
+PASS: Import Data sheet succcessfully
+Data sheet has 220 row and 36 column
+Preview Data sheet
+   GioiTinh  DoTuoi  HocVan  BoPhan  ThamNien  ThuNhap  TN1  TN2  TN3  TN4  TN5  DT1  DT2  DT3  ...  DN3  DN4  CV1  CV2  CV3  CV4  CV5  DK1  DK2  DK3  DK4  HL1  HL2  HL3
+0         2       1       3       3         2        2    4    3    5    3    5    4    2    4  ...    5    3  4.0    2    2    2    3    3    4    3    3    3    3    3
+1         2       2       3       4         2        1    5    5    4    4    5    4    4    2  ...    4    4  3.0    2    3    3    4    4    3    3    4    4    3    3
+2         2       3       3       4         4        2    2    4    4    4    3    5    3    4  ...    2    4  4.0    3    2    4    3    5    4    3    5    4    4    4
+
+[3 rows x 36 columns]
+PASS: Import Metadata sheet succcessfully
+Metadata sheet has 220 row and 36 column
+Preview Metadata sheet
+       Name     Group Is_Include Is_Depentdent Accepted_Value
+0  GioiTinh  Category        Yes            No            NaN
+1    DoTuoi  Category        Yes            No            NaN
+2    HocVan  Category        Yes            No            NaN
+
+TASK02: DATA TEST
+ERROR: Row 12 at column LD5 has NULL value
+ERROR: Row 21 at column CV1 has NULL value
+ERROR: Column DT4 at row 2 has outlier value 8
+ERROR: Column LD1 at row 7 has outlier value 7
+ERROR: Column LD5 at row 12 has outlier value nan
+ERROR: Column CV1 at row 21 has outlier value nan
+
